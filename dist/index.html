@@ -7,5 +7,33 @@
     <title>Cursor Animation With JavaScript</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body class="h-100vh cursor-none bg-blue-950">
+    <div class="cursor cursor-hidden fixed w-20 h-20 bg-blue-500 rounded-full shadow-blue-500 transform -translate-x-1/2 -translate-y-1/2 animate-spin""></div>
+    <section class="grid h-screen place-items-center">
+      <h1 class="text-6xl font-bold text-white">Cursor Animation</h1>
+    </section>
+    <style>
+      @keyframes colors {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+        100% {
+          filter: hue-rotate(360deg);
+        }
+      }
+      .cursor:before {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #2696E8;
+        opacity: 0.2;
+        transform: translate (30%, -30%)
+      }
+      </style>
+
+      <script src="JS/main.js"></script>
+  </body>
 </html>
+
